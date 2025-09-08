@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emergency hotline</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- dasyUI cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- tailwind css link -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <!-- header nav section -->
+    <header class="max-w-[1920px] p-3 border-2">
+      <div class="flex flex-col md:flex-row justify-between">
+        <!-- logo div -->
+        <div class="flex gap-3">
+          <img src="./assets/logo.png" alt="logo" class="w-16" />
+          <h1 class="text-[#006747] text-2xl font-extrabold">
+            Emergency <br />Service
+          </h1>
+        </div>
+
+        <!-- right side section -->
+        <div class="flex gap-6 mt-3">
+          <!-- 1st -->
+          <div
+            class="flex items-center gap-2 bg-[#3cff6660] w-28 rounded-full place-content-center"
+          >
+            <span class="font-bold text-xl">0</span>
+            <img src="./assets/heart.png" alt="life" class="h-8" />
+          </div>
+          <!-- 2nd -->
+          <div
+            class="flex items-center gap-2 bg-[#3cff6660] w-28 rounded-full place-content-center"
+          >
+            <span class="font-bold text-xl">0</span>
+            <img src="./assets/coin.png" alt="credit" class="w-8" />
+          </div>
+
+          <!-- 3rd -->
+          <div
+            class="flex items-center gap-2 bg-[#3cff6660] w-28 rounded-full place-content-center"
+          >
+            <span class="font-bold text-xl">2</span>
+            <p>Copy</p>
+          </div>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>
