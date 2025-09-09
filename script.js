@@ -50,24 +50,34 @@ for(const callBtn of callButton){
 
 
 // copy button er kaz korar jonno
+const copyCountHeader = document.getElementById('copyCount');
+let copyCount = 0;
+
 const copyButtons = document.querySelectorAll('.fa-copy');
 
 copyButtons.forEach(copyBtn => {
   copyBtn.closest('button').addEventListener('click', function() {
-    // card div work
+    // card div 
     const card = copyBtn.closest('.rounded-2xl');
     if (!card) return;
 
-    // number span er kaz
+    // number span
     const numberSpan = card.querySelector('span.font-extrabold');
     if (!numberSpan) return;
 
     const number = numberSpan.textContent.trim();
 
     navigator.clipboard.writeText(number)
-      .then(() => alert(`✅ Number ${number} copied to clipboard!`))
-      .catch(() => alert('❌ Copy failed!'));
+      .then(() => {
+        alert(`✅ Number ${number} copied to clipboard!`);
+
+        // header copy count update
+        copyCount++;
+        copyCountHeader.textContent = copyCount;
+      })
+      .catch(() => alert('❌ Copy failed'));
   });
 });
+
 
 
