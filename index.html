@@ -68,7 +68,7 @@
     <main>
       <!-- hero section -->
       <section
-        class="max-w-[1920px] h-[240px] bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] mx-auto"
+        class="max-w-[1920px] h-[270px] md:h-[240px] bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] mx-auto p-2 md:p-1"
       >
         <img src="./assets/logo-dark.png" alt="" class="w-36 mx-auto p-3" />
         <h2 class="font-bold text-3xl text-[#e7e7e7] text-center">
@@ -400,11 +400,25 @@
           </div>
 
           <!-- right -->
-          <div class="bg-[#fcfffd] col-span-3 p-5">
-            <div>dsfgsdf</div>
+          <div
+            class="bg-[#fcfffd] col-span-9 md:col-span-3 p-5 ml-5 md:ml-0 border-1 border-gray-200"
+          >
+            <div class="flex justify-between">
+              <span class="font-bold w-52 text-2xl"
+                ><i class="fa-regular fa-clock"></i> Call History</span
+              >
+              <div
+                class="flex items-center gap-2 bg-[#00A63E] w-28 rounded-full place-content-center text-white h-12"
+              >
+                <p>Clear</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </main>
+
+    <!-- js linkup -->
+    <script src="./script.js"></script>
   </body>
 </html>
