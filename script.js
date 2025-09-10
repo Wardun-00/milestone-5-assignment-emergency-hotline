@@ -81,3 +81,61 @@ copyButtons.forEach(copyBtn => {
 
 
 
+// history
+
+// time set korar jnno
+function getCurrentTime() {
+  const now = new Date();
+  return now.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+}
+// call button ta  select er jnno
+const callButtons = document.querySelectorAll(
+  ".bg-\\[\\#fcfffd\\] button.bg-\\[\\#00A63E\\]"
+);
+
+const historyContainer = document.getElementById("historyContainer");
+const clearBtn = document.getElementById("clearBtn");
+
+// call button click event 
+callButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const card = btn.closest(".bg-\\[\\#fcfffd\\]"); 
+    const name = card.querySelector("h2").innerText;
+    const number = card.querySelector("span.font-extrabold").innerText;
+    const logo = card.querySelector("img.w-24").src;
+    const time = getCurrentTime();
+
+    // history item make
+    const item = document.createElement("div");
+    item.classList.add(
+      "p-3",
+      "rounded-xl",
+      "border",
+      "border-gray-200",
+      "bg-[#f9f9f9]",
+      "flex",
+      "items-center",
+      "justify-between",
+      "gap-3",
+      "mt-3"
+    );
+// inner html
+    item.innerHTML = `
+      <div class="flex items-center gap-3">
+        <img src="${logo}" alt="logo" class="w-10 h-10 rounded-lg bg-gray-100 p-1"/>
+        <div>
+          <p class="font-bold text-base">${name}</p>
+          <p class="text-gray-600 text-sm">${number}</p>
+        </div>
+      </div>
+      <span class="text-xs text-gray-500">${time}</span>
+    `;
+    historyContainer.appendChild(item);
+  });
+});
+
+clearBtn.addEventListener("click", () => {
+  const items = historyContainer.querySelectorAll("div.mt-3");
+  items.forEach((el) => el.remove());
+});
+
