@@ -25,5 +25,5 @@ It is useful when you add new elements later and don’t want to add separate li
 
 5. What is the difference between preventDefault() and stopPropagation() methods?
 
-preventDefault(): stops the normal action of an event, like stopping a link from opening.  
-stopPropagation()- stops the event from going up to parent elements
+preventDefault(): stop the normal action of an event, like stopping a link from opening.  
+stopPropagation()- stop the event from going up to parent elements

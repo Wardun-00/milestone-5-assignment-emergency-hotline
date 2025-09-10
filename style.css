@@ -29,3 +29,9 @@
     transform-origin: center;
 }
 
+
+
+#copy-Card:hover{
+    background-color: #1f1e1e;
+    color: white;
+}
